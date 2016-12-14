@@ -1,5 +1,10 @@
 'use strict';
 
 module.exports = {
-  mongo: ''
+  mongo: '',
+  apiPort: 8080,
+  logs: {
+    console: './logs.log',
+    exception: './exceptions.log'
+  }
 }
