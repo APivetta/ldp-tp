@@ -1,0 +1,19 @@
+{
+  "name": "ldp-tp",
+  "version": "1.0.0",
+  "description": "TP Lenguajes de Programacion 2C 2016 CAECE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/APivetta/ldp-tp.git"
+  },
+  "author": "APivetta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/APivetta/ldp-tp/issues"
+  },
+  "homepage": "https://github.com/APivetta/ldp-tp#readme"
+}
