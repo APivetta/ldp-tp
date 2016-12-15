@@ -10,11 +10,11 @@ const connect = dbAddr => {
 
   mongoose.connect(dbAddr);
   db.on('error', () => {
-    logger.error('Connection error')
+    logger.error('Error al conectarse a la base de datos')
     deferred.reject();
   });
   db.once('open', function() {
-    logger.info('Connected')
+    logger.info('Conectado')
     deferred.resolve();
   });
 
