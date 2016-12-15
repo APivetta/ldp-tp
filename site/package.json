@@ -1,7 +1,7 @@
 {
-  "name": "NG6-material-sass",
-  "version": "0.0.1",
-  "description": "Angular es6 webpack sass Angular-Material Starter",
+  "name": "ldp-tp-site",
+  "version": "1.0.0",
+  "description": "TP Lenguajes de Programacion 2C 2016 CAECE SITIO",
   "main": "",
   "dependencies": {
     "angular": "^1.5.0",
@@ -70,7 +70,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/SSTYT/transito-pesado-CABA.git"
+    "url": "git+https://github.com/APivetta/ldp-tp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/APivetta/ldp-tp/issues"
   },
   "author": "Agustin Pivetta",
   "license": "MIT"
