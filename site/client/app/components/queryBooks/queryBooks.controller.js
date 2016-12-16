@@ -7,6 +7,7 @@ class QueryBooksController {
       exactTitle: true,
       exactAuthor: true
     }
+    this.searching = true;
   }
 
   errorToast(text) {
@@ -59,10 +60,11 @@ class QueryBooksController {
 
   search() {
     if (!this.scope.booksForm.$invalid) {
-      const params = {}
+      const params = this.formQuery();
       console.log(params);
       this.API.getAll(params, data => {
-        console.log(data);
+        this.books = data;
+        this.searching = false;
       }, error => {
         console.log(error);
         this.errorToast(error.message);

@@ -1,3 +1,44 @@
-<div>
-  <h1>{{ $ctrl.name }}</h1>
-</div>
+<md-content class="query-authors">
+    <md-card class="form" flex="60" flex-sm="100" ng-show="$ctrl.searching">
+        <md-card-header>
+            <md-card-header-text>
+                <span class="md-title">Buscar Autores</span>
+            </md-card-header-text>
+        </md-card-header>
+        <md-card-content>
+            <form name="authorsForm" class="authors-form">
+                <div layout-gt-xs="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Editorial</label>
+                        <input ng-model="$ctrl.form.publisher">
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-align="end" flex>
+                    <md-button ng-click="$ctrl.search()" ng-disabled="authorsForm.$invalid" class="md-primary">Buscar</md-button>
+                </div>
+            </form>
+        </md-card-content>
+    </md-card>
+    <md-card class="results" flex="60" flex-sm="100" ng-show="!$ctrl.searching">
+        <md-card-header>
+            <md-card-header-text>
+                <span class="md-title">Resultados</span>
+            </md-card-header-text>
+        </md-card-header>
+        <md-card-content>
+            <div layout="row" class="result-bar" flex>
+                <md-subheader class="md-no-sticky">{{$ctrl.authors.length}} {{$ctrl.authors.length==1?'resultado':'resultados'}}</md-subheader>
+                <md-button ng-click="$ctrl.searching=true" class="md-primary">Volver a Buscar</md-button>
+            </div>
+            <div layout="row" class="list" flex>
+                <md-list flex>
+                    <md-list-item class="md-3-line" ng-repeat="author in $ctrl.authors" flex>
+                        <div class="author-item md-list-item-text" layout="row">
+                            <h1>{{ author }}</h2>
+                        </div>
+                        <md-divider ></md-divider>
+                    </md-list-item>
+            </div>
+        </md-card-content>
+    </md-card>
+</md-content>

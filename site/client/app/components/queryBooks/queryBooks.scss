@@ -6,11 +6,30 @@
     justify-content: center;
     .books-form {
         font-size: 1.5em;
-        fieldset {
-            border: 1px solid #FFF;
-        }
-        .boat-number {
-            margin-top: 36px;
+    }
+    .results {
+        max-height: 85vh;
+        md-card-content {
+            max-height: 75vh;
+            .result-bar {
+                justify-content: space-between;
+                .md-subheader {
+                    background-color: white;
+                }
+            }
+            .list {
+                max-height: 70vh;
+                overflow-y: auto;
+                .book-item {
+                    align-content: flex-start;
+                    .col2 {
+                        margin-left: 40px;
+                    }
+                    .col1 {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
         }
     }
 }

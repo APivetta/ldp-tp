@@ -1,3 +1,53 @@
-.queryAuthors {
-  color: red;
+.query-authors {
+    width: 100vw;
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    .authors-form {
+        font-size: 1.5em;
+    }
+    .results {
+        max-height: 85vh;
+        md-card-content {
+            max-height: 75vh;
+            .result-bar {
+                justify-content: space-between;
+                .md-subheader {
+                    background-color: white;
+                }
+            }
+            .list {
+                max-height: 70vh;
+                overflow-y: auto;
+                .author-item {
+                    align-content: flex-start;
+                    .col2 {
+                        margin-left: 40px;
+                    }
+                    .col1 {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.error-toast {
+    .md-toast-content {
+        background-color: #ff5252;
+    }
+    i {
+        margin-right: 10px;
+    }
+}
+
+.success-toast {
+    .md-toast-content {
+        background-color: #00C853;
+    }
+    i {
+        margin-right: 10px;
+    }
 }

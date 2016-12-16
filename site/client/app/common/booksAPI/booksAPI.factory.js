@@ -10,7 +10,7 @@ const booksAPI = ($resource) => {
   	/api/books/:isbn			DELETE		Borra un libro
   */
   const actions = {
-    getAll: { method: 'GET', url: config.baseUrl },
+    getAll: { method: 'GET', url: config.baseUrl, isArray:true },
     create: { method: 'POST', url: config.baseUrl },
     deleteAll: { method: 'DELETE', url: config.baseUrl},
     get: { method: 'GET', url: config.baseUrl + config.parameters },
