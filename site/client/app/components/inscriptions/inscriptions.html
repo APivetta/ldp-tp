@@ -1,0 +1,55 @@
+<md-content class="inscriptions">
+    <md-card class="form" flex="60" flex-sm="100">
+        <md-card-header>
+            <md-card-header-text>
+                <span class="md-title">Inscripción</span>
+            </md-card-header-text>
+        </md-card-header>
+        <md-card-content>
+            <form name="inscription" class="inscription-form">
+                <fieldset ng-disabled="!$ctrl.championship.enabled">
+                    <md-input-container class="md-block" flex>
+                        <label>Campeonato</label>
+                        <input name="championship" ng-model="$ctrl.form.championship" ng-readonly="true">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex>
+                        <label>Nombre</label>
+                        <input name="firstName" ng-model="$ctrl.form.firstName" required ng-pattern="$ctrl.patterns.name">
+                        <div ng-messages="inscription.firstName.$error">
+                            <div ng-message="required">Campo Obligatorio</div>
+                            <div ng-message="pattern">Máximo 40 caracteres</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex>
+                        <label>Apellido</label>
+                        <input name="lastName" ng-model="$ctrl.form.lastName" required ng-pattern="$ctrl.patterns.name">
+                        <div ng-messages="inscription.lastName.$error">
+                            <div ng-message="required">Campo Obligatorio</div>
+                            <div ng-message="pattern">Máximo 40 caracteres</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex>
+                        <label>Clase de Barco</label>
+                        <md-select name="boatClass" ng-model="$ctrl.form.boatClass" required>
+                            <md-option ng-repeat="boatClass in $ctrl.boatClasses" value="{{boatClass.name}}">
+                                {{boatClass.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block boat-number" flex>
+                        <label>Número de Vela de Barco</label>
+                        <input name="boatClass" ng-model="$ctrl.form.boatNumber" required ng-pattern="$ctrl.patterns.boatNumber">
+                        <div ng-messages="inscription.boatNumber.$error">
+                            <div ng-message="required">Campo Obligatorio</div>
+                            <div ng-message="pattern">El campo debe tener menos de 15 caracteres alfanumericos sin espacio</div>
+                        </div>
+                    </md-input-container>
+                </fieldset>
+                <div layout="row" layout-align="end" flex>
+                    <md-button ng-click="$ctrl.resetForm()" ng-disabled="!inscription.$dirty">Limpiar Formulario</md-button>
+                    <md-button ng-click="$ctrl.save()" ng-disabled="inscription.$invalid" class="md-primary">Inscribirme</md-button>
+                </div>
+            </form>
+        </md-card-content>
+    </md-card>
+</md-content>

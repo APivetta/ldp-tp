@@ -1,0 +1,74 @@
+<md-content class="query-books">
+    <md-card class="form" flex="60" flex-sm="100">
+        <md-card-header>
+            <md-card-header-text>
+                <span class="md-title">Buscar Libros</span>
+            </md-card-header-text>
+        </md-card-header>
+        <md-card-content>
+            <form name="booksForm" class="books-form">
+                <div layout-gt-xs="row">
+                    <md-input-container class="md-block" flex-gt-xs>
+                        <label>Título</label>
+                        <input ng-model="$ctrl.form.title">
+                    </md-input-container>
+                    <md-input-container>
+                        <md-checkbox ng-model="$ctrl.form.exactTitle">
+                            Buscar título exacto
+                        </md-checkbox>
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Autor</label>
+                        <input ng-model="$ctrl.form.author">
+                    </md-input-container>
+                    <md-input-container>
+                        <md-checkbox ng-model="$ctrl.form.exactAuthor">
+                            Buscar autor exacto
+                        </md-checkbox>
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>ISBN</label>
+                        <input ng-model="$ctrl.form.isbn">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Género</label>
+                        <input ng-model="$ctrl.form.genre">
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Editorial</label>
+                        <input ng-model="$ctrl.form.publisher">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Año de Edición</label>
+                        <input name="year" ng-model="$ctrl.form.year" ng-pattern="/^[0-9]+$/">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Candidad de Páginas</label>
+                        <input name="pageCount" ng-model="$ctrl.form.pageCount" ng-pattern="/^[0-9]+$/">
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Desde Año</label>
+                        <input name="yearFrom" ng-model="$ctrl.form.yearFrom" ng-pattern="/^[0-9]+$/">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Hasta Año</label>
+                        <input name="yearTo" ng-model="$ctrl.form.yearTo" ng-pattern="/^[0-9]+$/">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-align="end" flex>
+                    <md-button ng-click="$ctrl.search()" ng-disabled="booksForm.$invalid" class="md-primary">Buscar</md-button>
+                </div>
+            </form>
+        </md-card-content>
+    </md-card>
+</md-content>

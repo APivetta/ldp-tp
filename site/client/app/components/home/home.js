@@ -12,7 +12,7 @@ let homeModule = angular.module('home', [
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('home', {
+    .state('app.home', {
       url: '/',
       component: 'home'
     });

@@ -1,0 +1,4 @@
+{
+	"baseUrl": "http://apivetta.ddns.net:8080/api/books/",
+	"parameters": ":isbn"
+}

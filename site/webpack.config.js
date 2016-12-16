@@ -8,12 +8,15 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'ng-annotate!babel' },
-      { test: /\.html$/, loader: 'raw' },
-      { test: /\.scss$/, loader: 'style!css!sass' },
-      { test: /\.css$/, loader: 'style!css' },
+      { test: /\.html$/, loader: 'html' },
+      { test: /\.scss$/, loader: 'style!css!resolve-url!sass' },
+      { test: /\.css$/, loader: 'style!css!resolve-url' },
       { test: /\.json$/, loader: 'json' },
-      { test: /\.(svg|woff|woff2|ttf|eot|png|jpg)$/, loader: 'file?name=assets/[name].[hash].[ext]' }
+      { test: /\.(svg|png|woff|woff2|ttf|eot)$/, loader: 'file?name=[name].[hash].[ext]' }
     ]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "./client")]
   },
   plugins: [
     // Injects bundles in your index.html instead of wiring all manually.

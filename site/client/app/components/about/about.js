@@ -9,7 +9,7 @@ let aboutModule = angular.module('about', [
 .config(($stateProvider) => {
   "ngInject";
   $stateProvider
-    .state('about', {
+    .state('app.about', {
       url: '/about',
       component: 'about'
     });

@@ -1,16 +1,31 @@
-<div class="home" layout="column" style="height:100vh" ng-cloak>
-    <md-toolbar>
-        <div class="md-toolbar-tools">
-            <h3>
-        <span>{{$ctrl.title}}</span>
-      </h3>
+<section class="home">
+    <article class="landing">
+        <h1 class="app-title">Biblioteca App</h1>
+        <div class="cards">
+            <md-card class="feature" ui-sref="app.queryBooks">
+            <i flex class="material-icons">import_contacts</i>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Consultar Libros</span>
+                    </md-card-title-text>
+                </md-card-title>
+            </md-card>
+            <md-card class="feature" ui-sref="app.adminBooks">
+                <i flex class="material-icons">edit</i>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Administrar Libros</span>
+                    </md-card-title-text>
+                </md-card-title>
+            </md-card>
+            <md-card class="feature" ui-sref="app.queryAuthors">
+                <i flex class="material-icons">contacts</i>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Consultar Autores</span>
+                    </md-card-title-text>
+                </md-card-title>
+            </md-card>
         </div>
-    </md-toolbar>
-    <md-content flex>
-        <main >
-            <div>
-                <h1>Found in {{ $ctrl.title }}.html</h1>
-            </div>
-        </main>
-    </md-content>
-</div>
+    </article>
+</section>

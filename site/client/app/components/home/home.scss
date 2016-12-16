@@ -1,3 +1,50 @@
-.home{
-  color: red;
+@import "app/common/variables";
+
+.home {
+    background-color: $primary-color;
+    color: white;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .landing {
+        width: 80vw;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            font-size: 5em;
+        }
+        h2 {
+            font-size: 2.5em;
+            opacity: 0.7;
+        }
+        .app-title,
+        .app-desc {
+            flex: 1 80%;
+            text-align: center;
+        }
+        .cards {
+            margin: 100px 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100vw;
+            .feature {
+                cursor: pointer;
+                color: rgb(117, 117, 117);
+                min-width: 300px;
+                
+                text-align: center;
+                i {
+                    font-size: 5em;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
 }
