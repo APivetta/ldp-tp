@@ -49,6 +49,6 @@ Gulp se utiliza para compilar y lanzar la aplicación. Una vez instaladas toda l
 * `nodemon index.js`
   * Levanta la API y la refresca en cada modificación de los archivos de código.
   
-### Desarrollo
+### Producción
 * `forever start index.js`
   * Levanta la API como demonio y la levanta automaticamente ante fallas.
