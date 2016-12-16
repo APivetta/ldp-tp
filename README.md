@@ -10,6 +10,9 @@ ___
 # Alumno:
 	Agustín Pivetta, 992850
 
+# Repositorio: 
+	https://github.com/APivetta/ldp-tp
+
 # Especificación:
 Se desea hacer un sistema que administre los libros de una biblioteca pequeña. Se deberá diseñar una base de datos, basada en un lista simplemente encadenada de libros, que permita altas, bajas, consultas y modificaciones.
 La estructura básica para un libro deberá contener la siguiente información: titulo, autor (hasta tres autores), cantidad de páginas, número ISBN, año de edición, editorial, género al que pertenece (ficción, política, biografía, historia, aventura, etc), pueden agregarle otros datos que crean convenientes.
