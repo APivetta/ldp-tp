@@ -1,16 +1,16 @@
-import AdminBooksModule from './adminBooks'
-import AdminBooksController from './adminBooks.controller';
-import AdminBooksComponent from './adminBooks.component';
-import AdminBooksTemplate from './adminBooks.html';
+import ModifyBooksModule from './modifyBooks'
+import ModifyBooksController from './modifyBooks.controller';
+import ModifyBooksComponent from './modifyBooks.component';
+import ModifyBooksTemplate from './modifyBooks.html';
 
-describe('AdminBooks', () => {
+describe('ModifyBooks', () => {
   let $rootScope, makeController;
 
-  beforeEach(window.module(AdminBooksModule));
+  beforeEach(window.module(ModifyBooksModule));
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
     makeController = () => {
-      return new AdminBooksController();
+      return new ModifyBooksController();
     };
   }));
 
@@ -30,20 +30,20 @@ describe('AdminBooks', () => {
     // template specs
     // tip: use regex to ensure correct bindings are used e.g., {{  }}
     it('has name in template [REMOVE]', () => {
-      expect(AdminBooksTemplate).to.match(/{{\s?\$ctrl\.name\s?}}/g);
+      expect(ModifyBooksTemplate).to.match(/{{\s?\$ctrl\.name\s?}}/g);
     });
   });
 
   describe('Component', () => {
       // component/directive specs
-      let component = AdminBooksComponent;
+      let component = ModifyBooksComponent;
 
       it('includes the intended template',() => {
-        expect(component.template).to.equal(AdminBooksTemplate);
+        expect(component.template).to.equal(ModifyBooksTemplate);
       });
 
       it('invokes the right controller', () => {
-        expect(component.controller).to.equal(AdminBooksController);
+        expect(component.controller).to.equal(ModifyBooksController);
       });
   });
 });

@@ -35,7 +35,7 @@ Esta aplicación usa Gulp y Webpack como sistema de compilación.
 
 
 ## Estructura de Archivos
-Se estructuran los archivos en componentes. Un componentes es un concepto auto contenido, puede ser desde una funcionalidad entera a elementos de la UI.
+Se estructuran los archivos en componentes. Un componente es un concepto auto contenido, puede ser desde una funcionalidad entera a elementos de la UI.
 
 ```
 client
